@@ -9,16 +9,53 @@ print
 3. loquacious
 4. texas
 */
+const array = ['saturday', 'minnesota', 'loquacious', 'texas'];
+//1. using arrow instead of keyword funciton
+//2. there's only one line of code
+let new_array = array.map((el, i) => {
+    if (i%2==0){
+        return "this is an even index"
+    } else {
+        return `${i+1}. ${el}` //MUST RETURN THING TO REPLACE
+    }
+})
+// console.log(new_array);
 
-/*
-find the sum of all numbers in an array
+let example = ['red', 'green', 'blue', 'black', 'white']
+//['r', 'g', 'b', 'b', 'w']...use .map on example
+let firstLetters = example.map((el, i) => {
+    return el[0]
+})
+//['r', 'g', 'blue', 'black', 'w']....use .map on example
+let notTheBs = example.map((el,i) => {
+    // if(el[0] === 'b') {
+    //     return el;
+    // } else {
+    //     return el[0];
+    // }
+    return el[0] === 'b' ? el : el[0]
+})
 
-[1, 2, 3, 4, 5] => 15
-*/
+//example => ['blue', 'black']
+let blueBlack = example.filter((el, i) => {
+    return el[0] === 'b';
+})
+//['green', 'black', 'white']...strings with length > 4
+let longLongString = example.filter((el, i) => {
+    if(el.length > 4){
+        return true //el is a string which is truthy
+    } else {
+        return false;
+    }
+    return (el.length > 4)
+})
+console.log(longLongString);
 
-/*
-find the value of a raised to the b
-findPow(a, b) 
-findPow(3, 5) => 243
-findPow(5, 2) => 25
-*/
+
+let shop = [
+    {name: 'lskdjf', price: 333333}, 
+    {name: 'skdlf', price: 3}
+]
+let expensive = shop.filter((el, i) => {
+    return el.name.includes('j');
+})
