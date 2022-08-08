@@ -63,10 +63,41 @@ let primeTestOne = primeTest.filter((el) => {
 })
 
 
+/*
+Phase 2 Week 1 Day 2
+    1. Function to print nth number in the fibonacci sequence. Ex. fib(9) =>  21
+    2. Given an array of strings filter out all strings with unique characters Ex. ['banana', 'cat', 'apple', 'dog] => ['cat', 'dog']
+*/
 
+//1. fib
+const fib = function(n){
+    let prev = 0;
+    let cur = 1;
+    for(let i = 2; i < n; i++){
+        let newPrev = cur;
+        let newCur = cur + prev;
+        cur = newCur;
+        prev = newPrev;
+    }
+    return cur;
+}
 
-
-
+const uniqueTest = ['banana', 'cat', 'apple', 'dog']
+//2. filter out strings with unique characters
+const uniqueChars = function(arr) {
+    return arr.filter((el) => {
+        //could use a set 
+        let dict = {}
+        for(let i = 0; i < el.length; i++){
+            if (dict.hasOwnProperty(el[i])){
+                return false //immediately exists callback and doesn't check rest of chars
+            } else {
+                dict[el[i]] = 1;
+            }
+        }
+        return true;
+    })
+}
 
 
 
