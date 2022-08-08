@@ -140,4 +140,32 @@ const removeSpaceTest = ['app le', 'se ri ous', 'fell ow ship', 'red bul l'];
 const removeSpaces = function(arr){
     return arr.map((el) => el.replaceAll(' ', ''))
 }
-console.log(removeSpaces(removeSpaceTest))
+
+/* Phase 2 Week 1 Day 4
+1. Given an integer n that is the square of some integer x, find the next perfect square.  You should be returning the square of x + 1.  If n is not a perfect square return -1. 
+    Ex. 121 => 144, 114 => -1, 625 => 676
+2. Given an array of unsorted integers, return the missing integer.
+	Ex. [1, 3, 6, 5, 2] => 4
+	    [5, 2, 4, 3] => 1
+*/
+
+//1. nextPerfectSquare
+const nextPerfectSquare = function(n){
+    let sqrt = Math.sqrt(n);
+    if(Math.floor(sqrt) !== sqrt){
+        return -1
+    }
+    return (sqrt + 1)**2;
+}
+
+//2. missing integer
+const missingIntTestOne = [1, 3, 6, 5, 2]
+const missingIntTestTwo = [5, 2, 4, 3]
+const missingInteger = function(arr){
+    for(let i = 1; i <= arr.length; i++){
+        if(!arr.includes(i)){
+            return i
+        }
+    }
+    return -1
+}
