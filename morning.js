@@ -9,7 +9,7 @@ Ex
 [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] => [2, 3, 5, 7, 11, 13]
 */
 
-//1. reverse string
+//~~~~~~~~~~~~~~~~~~~~~~~1. reverse string
 const test = ['bat', 'metz', 'seal', 'ten']
 //using built in methods
 let revTestOne = test.map((el) => {
@@ -29,7 +29,7 @@ let revTestTwo = test.map(flipper)
 
 
 
-//2. case string
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~2. case string
 const caseTest = ['BaT', 'mEtZ', 'SeAl', 'tEn']
 let caseTestOne = caseTest.map(el => {
     //build up new string
@@ -51,7 +51,7 @@ let caseTestOne = caseTest.map(el => {
 })
 
 
-//3. prime numbers
+//~~~~~~~~~~~~~~~~~~~~~~~~3. prime numbers
 const primeTest = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 let primeTestOne = primeTest.filter((el) => {
     for(let i = 2; i < el; i++){ //there are ways to optimize for large numbers
