@@ -103,3 +103,41 @@ const uniqueChars = function(arr) {
 
 
 
+/*
+Phase 2 Week 1 Day 3:
+1. Given a 2D array of strings where the first element represents a color and the second element represents an association, create a dictionary of key/value pairs where the color is the key and the association is the value.
+
+[["white", "flowers"], ["red", "blood"], ["yellow", "sun"], ["blue", "sky"], ["brown", "earth"], ["black", "night"], ["purple", "annoying people"], ["orange", "orange"]] =>
+{
+    white: "flowers", 
+    red: "blood",
+    yellow: "sun", 
+    blue: "sky", 
+    brown: "earth", 
+    black: "night", 
+    purple: "annoying people", 
+    orange: "orange"
+}
+
+2. 2. Given an array of strings write a function that removes all spaces in each string
+Ex. 
+
+['app le', 'se ri ous', 'fell ow ship', 'red bul l'] => ['apple', 'serious', 'fellowship', 'redbull']
+*/
+
+//1. association
+const colorAssTest = [["white", "flowers"], ["red", "blood"], ["yellow", "sun"], ["blue", "sky"], ["brown", "earth"], ["black", "night"], ["purple", "annoying people"], ["orange", "orange"]]
+const colorAssociation = function(arr) {
+    let dict = {};
+    arr.forEach((el) => {
+        dict[el[0]] = el[1]
+    })
+    return dict;
+}
+
+//2. remove white spaces
+const removeSpaceTest = ['app le', 'se ri ous', 'fell ow ship', 'red bul l'];
+const removeSpaces = function(arr){
+    return arr.map((el) => el.replaceAll(' ', ''))
+}
+console.log(removeSpaces(removeSpaceTest))
