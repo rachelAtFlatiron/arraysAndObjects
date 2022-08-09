@@ -63,10 +63,23 @@ let primeTestOne = primeTest.filter((el) => {
 })
 
 
-
-
-
-
+/*
+Phase 1 Week 1 Day 2
+1. Given a positive integer n return the nth number in the fibonacci sequence. 
+   Where the first two elements in the sequence are 0 and 1
+    Ex. fib(9) => 21
+2. Given an array of strings filter out all strings with unique characters 
+    Ex. ['banana', 'cat', 'apple', 'dog] => ['cat', 'dog']
+*/
+const uniqueTest = ['banana', 'cat', 'apple', 'dog']
+//~~~~~~~~~~~~~~~~~~~~~~~~1. fib
+const fib = function(n){
+    //
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~2. filter unique chars
+const uniqueChars = function(arr){
+    //
+}
 
 
 
