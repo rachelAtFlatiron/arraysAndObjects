@@ -119,7 +119,7 @@ Phase 2 Week 1 Day 3:
     orange: "orange"
 }
 
-2. 2. Given an array of strings write a function that removes all spaces in each string
+2. Given an array of strings write a function that removes all spaces in each string
 Ex. 
 
 ['app le', 'se ri ous', 'fell ow ship', 'red bul l'] => ['apple', 'serious', 'fellowship', 'redbull']
