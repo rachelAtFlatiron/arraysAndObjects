@@ -30,7 +30,7 @@ rev_proc = Proc.new { |el|
 rev_test = test.map {
     |str| rev_proc.call(str)
 }
-p rev_test
+
 
 # //~~~~~~~~~~~~~~~~~~~~~~~~~~~~2. case string
 # const caseTest = ['BaT', 'mEtZ', 'SeAl', 'tEn']
@@ -64,7 +64,7 @@ caseTest = caseTest.map{ |el|
     end 
     new_str 
 }
-p caseTest
+
 
 
 # //~~~~~~~~~~~~~~~~~~~~~~~~3. prime numbers
@@ -90,7 +90,7 @@ prime_test_one = prime_test.select { |el|
     end 
     flag 
 }
-p prime_test_one
+
 
 # //~~~~~~~~~~~~~~~~~~~~~~~~1. fib
 # const fib = function(n){
@@ -119,7 +119,7 @@ def fib n
     end 
     curr 
 end 
-p fib 9
+
 
 
 # //~~~~~~~~~~~~~~~~~~~~~~~~2. filter unique chars
@@ -148,7 +148,7 @@ unique_arr = unique_arr.filter{
     } 
     flag 
 }
-p unique_arr
+
 
 # const convertDictTest = [["white", "flowers"], ["red", "blood"], ["yellow", "sun"], ["blue", "sky"], ["brown", "earth"], ["black", "night"], ["purple", "violet"], ["orange", "orange"]]
 # const convertDict = function(arr){
@@ -175,5 +175,3 @@ def convert_dict
     end  
     convert_dict_hash
 end 
-
-p convert_dict
