@@ -80,17 +80,18 @@ caseTest = caseTest.map{ |el|
 
 prime_test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
-prime_test_one = prime_test.select { |el|  
-    #binding.pry
-    flag = true
-    for i in 2...el do  
-        if el % i == 0 
-            flag = false 
-        end 
+prime_test_one = prime_test.filter{
+    |x| #(el) => 
+    flag = true  #let flag = true
+    for i in 2...x do  #for (let i = 2; i < x; i++)
+        #binding.pry
+        #if x isn't prime 
+        if x % i == 0 #if(x % i === 0) 
+            flag = false #flag = false
+        end
     end 
-    flag 
+    flag #return flag
 }
-
 
 # //~~~~~~~~~~~~~~~~~~~~~~~~1. fib
 # const fib = function(n){
@@ -175,3 +176,20 @@ def convert_dict
     end  
     convert_dict_hash
 end 
+
+
+
+
+
+# //~~~~~~~~~~~~~~~~~~~~~~~~3. prime numbers
+# const primeTest = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+# let primeTestOne = primeTest.filter((el) => {
+#     for(let i = 2; i < el; i++){ //there are ways to optimize for large numbers
+#         if(el % i === 0){
+#             return false;
+#         } 
+#     }
+#     return true;
+# })
+
+
