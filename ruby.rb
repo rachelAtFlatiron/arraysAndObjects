@@ -52,20 +52,28 @@ rev_test = test.map {
 #     //return newStr so map can replace el in array
 #     return newStr
 # })
-caseTest = ['BaT', 'mEtZ', 'SeAl', 'tEn']
-caseTest = caseTest.map{ |el| 
-    new_str = ''
-    for i in 0...el.length do 
-        if(el[i].upcase == el[i])
-            new_str += el[i].downcase 
-        else 
-            new_str += el[i].upcase 
-        end 
+case_test = ['BaT', 'mEtZ', 'SeAl', 'tEn']
+#['bAt', 'MeTz', 'sEaL', 'TeN']
+case_test = case_test.map{ |str| #map through array
+
+    #for each element in array, loop through chars
+    new_str = "" 
+
+    for i in 0...str.length do  #for (let i = 0; i < str.length; i++)
+        #swap the case with if/else
+        # if str[i] == str[i].downcase 
+        #     new_str += str[i].upcase 
+        # else  
+        #     new_str += str[i].downcase 
+        # end 
+
+        #ternary
+        str[i] == str[i].downcase ? 
+        new_str += str[i].upcase : 
+        new_str += str[i].downcase 
     end 
     new_str 
 }
-
-
 
 # //~~~~~~~~~~~~~~~~~~~~~~~~3. prime numbers
 # const primeTest = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -191,5 +199,4 @@ end
 #     }
 #     return true;
 # })
-
 
