@@ -41,14 +41,43 @@ function binary(list, x){
     return -1
 }
 
-console.log(binary(list_one, 3)) //2
-console.log(binary(list_two_sorted, 66)) //5
-console.log(binary(list_two_sorted, 66666)) //-1
-console.log(binary(list_single, 3)) //0
-console.log(binary(list_single, 9999)) //0
+// console.log(binary(list_one, 3)) //2
+// console.log(binary(list_two_sorted, 66)) //5
+// console.log(binary(list_two_sorted, 66666)) //-1
+// console.log(binary(list_single, 3)) //0
+// console.log(binary(list_single, 9999)) //0
 
 
+let arr = [-10, -1, 0, 3, 10, 11, 30, 50, 100]
+let arr1 = [-10, -5, 0, 3, 7]
+let arr2 = [0, 2, 5, 8, 17]
+let arr3 = [-10, -5, 3, 4, 7, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
 
+
+function fixedPoint(arr){
+    let low = 0
+    let high = arr.length - 1
+    while(low <= high) {
+        let i = Math.floor((low + high) / 2) //represents middle index
+        //return 
+        if (i === arr[i]){
+            return i
+        }
+        //go right 
+        if (i > arr[i]) {
+            low = i + 1
+        //go left
+        } else if (i < arr[i]) {
+            high = i - 1
+        }
+    }
+    return -1;
+}
+
+console.log(fixedPoint(arr)) //3
+console.log(fixedPoint(arr1)) //3 
+console.log(fixedPoint(arr2)) //0
+console.log(fixedPoint(arr3)) //-1
 
 
 
